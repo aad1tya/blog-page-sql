@@ -12,7 +12,7 @@ class Post(models.Model):
     last_modified = models.DateField(auto_now=True)
     categories = models.ManyToManyField('Category', related_name='posts')
 
-class Commment(models.Model):
+class Comment(models.Model):
     author = models.CharField(max_length=60)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
