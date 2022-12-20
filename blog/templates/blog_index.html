@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block page_content %}
+{% load markdown_extras %}
+<div class="text-center"><h1 style="background-color: black; color: white; padding-top: 10; padding-bottom: 10; font-size: x-large;">✨A Comprehensive Guide To Using PostgreSQL✨</h1></div>
+
 
 <div class="col-md-8 offset-md-2">
 
@@ -30,7 +33,7 @@
 
     </small>
 
-    <p>{{ post.body | slice:":400" }}...</p>
+    <p>{{ post.body | markdown | safe | slice:":200" }}...</p>
 
     {% endfor %}
 
